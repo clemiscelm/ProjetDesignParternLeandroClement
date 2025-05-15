@@ -8,6 +8,7 @@ public class EnemyBT : MonoBehaviour {
     public float ShootingRange = 10f;
     public float MeleeRange = 2f;
     public Transform[] PatrolPoints;
+    public GameObject Bullet;
     public NavMeshAgent Agent { get; private set; }
 
     private Node root;
@@ -36,5 +37,13 @@ public class EnemyBT : MonoBehaviour {
 
     void Update() {
         root.Evaluate();
+    }
+    public void shoot()
+    {
+        Instantiate(Bullet, transform.position, this.transform.rotation);
+    }
+    private void UpdateAnimator()
+    {
+        //Animator.SetFloat("WalkSpeed", Agent.velocity.magnitude);
     }
 }

@@ -14,9 +14,12 @@ public class ShootNode : Node {
             Debug.Log("Enemy shooting at player.");
             lastShotTime = Time.time;
             // add code to perform shooting action flemme
+            enemy.shoot();
         }
 
         enemy.Agent.destination = enemy.Player.position;
         return NodeState.Running;
     }
+
+    
 }

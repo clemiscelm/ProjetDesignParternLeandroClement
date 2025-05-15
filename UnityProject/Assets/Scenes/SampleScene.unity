@@ -2028,6 +2028,7 @@ MonoBehaviour:
   PatrolPoints:
   - {fileID: 1859532062}
   - {fileID: 2064927454}
+  Bullet: {fileID: 6917320056427121270, guid: 23f12c65e423aa349a821cffba399891, type: 3}
 --- !u!1001 &123920231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29802,6 +29803,7 @@ MonoBehaviour:
   PlayerMovementParameters: {fileID: 11400000, guid: 641ec4183b3b0b24ab2bb10666913d90,
     type: 2}
   Velocity: {x: 0, y: 0}
+  attackCooldown: 0
   Animator: {fileID: 0}
 --- !u!1001 &316894929158137843
 PrefabInstance:
