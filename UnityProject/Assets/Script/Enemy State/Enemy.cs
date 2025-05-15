@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
     public Transform[] PatrolPoints;
     public Transform Player;
     public float SightRange = 10f;
+    public Animator Animator;
 
     public NavMeshAgent NavMeshAgent { get; private set; }
 
@@ -13,6 +14,7 @@ public class Enemy : MonoBehaviour
 
     void Start() {
         NavMeshAgent = GetComponent<NavMeshAgent>();
+        Animator = GetComponentInChildren<Animator>();
         ChangeState(new IdleState());
     }
 

@@ -8,12 +8,14 @@ public class EnemyBT : MonoBehaviour {
     public float ShootingRange = 10f;
     public float MeleeRange = 2f;
     public Transform[] PatrolPoints;
+    public Animator Animator;
     public NavMeshAgent Agent { get; private set; }
 
     private Node root;
 
     void Start() {
         Agent = GetComponent<NavMeshAgent>();
+        Animator = GetComponentInChildren<Animator>();
 
         root = new Selector(new List<Node> {
             new Sequence(new List<Node> {
@@ -36,5 +38,6 @@ public class EnemyBT : MonoBehaviour {
 
     void Update() {
         root.Evaluate();
+        Animator.SetFloat("WalkSpeed", Agent.velocity.magnitude);
     }
 }
