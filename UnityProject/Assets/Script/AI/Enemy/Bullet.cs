@@ -6,13 +6,10 @@ public class Bullet : MonoBehaviour
     public float lifetime = 2f;
     public float damage = 10f;
 
-    // Update is called once per frame
     void Update()
     {
-        // Move the bullet forward
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
-        // Destroy the bullet after its lifetime
         lifetime -= Time.deltaTime;
         if (lifetime <= 0f)
         {
@@ -22,13 +19,17 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        // Check if the bullet hit an enemy
         if (collision.gameObject.CompareTag("Player"))
         {
+            IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
             PlayerStateMachine player = collision.gameObject.GetComponent<PlayerStateMachine>();
             if (player != null)
             {
-                player.ChangeState(player.HitState);
+                if (damageable != null) 
+                {
+                    damageable.TakeDamage(20f);
+                    player.ChangeState(player.HitState);
+                }
                 Destroy(gameObject);
             }
         }

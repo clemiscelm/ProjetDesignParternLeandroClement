@@ -10,6 +10,7 @@ public class EnemyBT : MonoBehaviour {
     public Transform[] PatrolPoints;
     public GameObject Bullet;
     public Animator Animator;
+    
     public NavMeshAgent Agent { get; private set; }
 
     private Node root;
@@ -45,8 +46,5 @@ public class EnemyBT : MonoBehaviour {
     {
         Instantiate(Bullet, transform.position, this.transform.rotation);
     }
-    private void UpdateAnimator()
-    {
-        //Animator.SetFloat("WalkSpeed", Agent.velocity.magnitude);
-    }
+    
 }

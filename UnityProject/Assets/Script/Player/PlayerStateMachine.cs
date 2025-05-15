@@ -165,5 +165,12 @@ public class PlayerStateMachine : MonoBehaviour
             attackCooldown = Mathf.Clamp(attackCooldown - Time.deltaTime, 0, PlayerMovementParameters.AttackSpeed);
         }
     }
+    void OnDrawGizmos()
+    {
+        // Pour voir la zone d'attaque dans la scène
+        Gizmos.color = Color.red;
+        Vector3 attackPosition = transform.position + transform.forward * 1.5f;
+        Gizmos.DrawWireSphere(attackPosition, 1.5f);
+    }
 
 }

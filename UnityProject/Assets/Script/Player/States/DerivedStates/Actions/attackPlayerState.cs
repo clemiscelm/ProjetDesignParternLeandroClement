@@ -6,6 +6,8 @@ using UnityEngine;
 public class AttackPlayerState : PlayerState
 {
     private Vector2 _timeSinceEnteredState;
+    private bool hasAlreadyHit = false;
+
     protected override void OnStateInit()
     {
     }
@@ -26,6 +28,8 @@ public class AttackPlayerState : PlayerState
         {
             StateMachine.attackCooldown = 1/_playerMovementParameters.AttackSpeed;
             StateMachine.Animator.SetTrigger("Attack");
+            hasAlreadyHit = false;
+            PerformAttackHitDetection();
         }
         if (!_inputsManager.InputInteract)
         {
@@ -87,4 +91,32 @@ public class AttackPlayerState : PlayerState
         float speedRatio = timeValue / _playerMovementParameters.accelerationTime;
         velocityComponent = (speedRatio/_playerMovementParameters.VelocityPenaltyOnAttack) * _playerMovementParameters.maxSpeed;
     }
+
+    private void PerformAttackHitDetection()
+    {
+        if (hasAlreadyHit) return;
+
+        float attackRange = 1.5f;
+        float attackDamage = 50f;
+        Vector3 attackPosition = StateMachine.transform.position + StateMachine.transform.forward * 1.5f;
+
+        Collider[] hits = Physics.OverlapSphere(attackPosition, attackRange);
+        foreach (Collider hit in hits)
+        {
+            if (hit.CompareTag("Enemy"))
+            {
+                Debug.Log("Hit an enemy");
+                IDamageable damageable = hit.GetComponent<IDamageable>();
+                if (damageable != null)
+                {
+                    damageable.TakeDamage(attackDamage);
+                    Debug.Log("Enemy hit by player attack: -" + attackDamage);
+                    hasAlreadyHit = true;
+                }
+            }
+        }
+    }
+    
+
+
 }

@@ -11,9 +11,7 @@ public class ShootNode : Node {
 
     public override NodeState Evaluate() {
         if (Time.time - lastShotTime > shootCooldown) {
-            Debug.Log("Enemy shooting at player.");
             lastShotTime = Time.time;
-            // add code to perform shooting action flemme
             enemy.shoot();
         }
 
