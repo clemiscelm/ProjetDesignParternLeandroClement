@@ -5,7 +5,7 @@ public class Bullet : MonoBehaviour
     public float speed = 20f;
     public float lifetime = 2f;
     public float damage = 10f;
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -17,6 +17,20 @@ public class Bullet : MonoBehaviour
         if (lifetime <= 0f)
         {
             Destroy(gameObject);
-        }    
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        // Check if the bullet hit an enemy
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerStateMachine player = collision.gameObject.GetComponent<PlayerStateMachine>();
+            if (player != null)
+            {
+                player.ChangeState(player.HitState);
+                Destroy(gameObject);
+            }
+        }
     }
 }

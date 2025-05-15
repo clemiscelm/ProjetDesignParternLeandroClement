@@ -19,3 +19,4 @@ MonoBehaviour:
   normalizeVelocity: 1
   AttackSpeed: 1
   VelocityPenaltyOnAttack: 2
+  StaggerTime: 0.5

@@ -4084,10 +4084,10 @@ MonoBehaviour:
   ShootingRange: 10
   MeleeRange: 2
   PatrolPoints:
-  - {fileID: 734715067}
   - {fileID: 800215578}
-  - {fileID: 1261631734}
   - {fileID: 1860419926}
+  - {fileID: 734715067}
+  - {fileID: 1261631734}
   Bullet: {fileID: 6917320056427121270, guid: 23f12c65e423aa349a821cffba399891, type: 3}
   Animator: {fileID: 0}
 --- !u!1001 &265325858
@@ -22346,10 +22346,10 @@ MonoBehaviour:
   ShootingRange: 10
   MeleeRange: 2
   PatrolPoints:
-  - {fileID: 734715067}
   - {fileID: 800215578}
-  - {fileID: 1261631734}
   - {fileID: 1860419926}
+  - {fileID: 734715067}
+  - {fileID: 1261631734}
   Bullet: {fileID: 6917320056427121270, guid: 23f12c65e423aa349a821cffba399891, type: 3}
   Animator: {fileID: 0}
 --- !u!4 &1566352342 stripped
@@ -24090,10 +24090,10 @@ MonoBehaviour:
   ShootingRange: 10
   MeleeRange: 2
   PatrolPoints:
-  - {fileID: 734715067}
   - {fileID: 800215578}
-  - {fileID: 1261631734}
   - {fileID: 1860419926}
+  - {fileID: 734715067}
+  - {fileID: 1261631734}
   Bullet: {fileID: 6917320056427121270, guid: 23f12c65e423aa349a821cffba399891, type: 3}
   Animator: {fileID: 0}
 --- !u!4 &1701554541 stripped
@@ -27627,10 +27627,10 @@ MonoBehaviour:
   ShootingRange: 10
   MeleeRange: 2
   PatrolPoints:
-  - {fileID: 734715067}
   - {fileID: 800215578}
-  - {fileID: 1261631734}
   - {fileID: 1860419926}
+  - {fileID: 734715067}
+  - {fileID: 1261631734}
   Bullet: {fileID: 6917320056427121270, guid: 23f12c65e423aa349a821cffba399891, type: 3}
   Animator: {fileID: 0}
 --- !u!4 &1992930036 stripped
@@ -29963,6 +29963,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6331558144665418028, guid: 8b89fdb0c71dd438b9b7b0ef242463bc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 9003200076993734132, guid: 8b89fdb0c71dd438b9b7b0ef242463bc,
         type: 3}
       propertyPath: _drawDebugGizmo
@@ -29981,6 +29986,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 164211095928399048}
+    - targetCorrespondingSourceObject: {fileID: 6331558144665418028, guid: 8b89fdb0c71dd438b9b7b0ef242463bc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 164211095928399050}
   m_SourcePrefab: {fileID: 100100000, guid: 8b89fdb0c71dd438b9b7b0ef242463bc, type: 3}
 --- !u!4 &164211095928399045 stripped
 Transform:
@@ -30037,6 +30046,29 @@ MonoBehaviour:
   Velocity: {x: 0, y: 0}
   attackCooldown: 0
   Animator: {fileID: 0}
+--- !u!136 &164211095928399050
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164211095928399046}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 3.034186
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.017093, z: 0}
 --- !u!1001 &316894929158137843
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -22,6 +22,7 @@ public class HitPlayerState : PlayerState
 
     protected override void OnStateUpdate()
     {
+        _timeSinceEnteredState += Time.deltaTime;
         if (_timeSinceEnteredState>_playerMovementParameters.StaggerTime)
         {
             if (_inputsManager.MoveX != 0 || _inputsManager.MoveY != 0)
