@@ -8,8 +8,10 @@ public class MeleeAttackNode : Node {
     }
 
     public override NodeState Evaluate() {
-        Debug.Log("Enemy performs melee attack!");
-        // code to perform melee attack flemme
+
+        PlayerStateMachine playerStateMachine = enemy.Player.GetComponent<PlayerStateMachine>();
+        playerStateMachine.ChangeState(playerStateMachine.HitState);
+        enemy.Animator.SetTrigger("Attack");
         return NodeState.Running;
     }
 }

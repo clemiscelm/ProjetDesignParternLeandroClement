@@ -39,6 +39,8 @@ public class PlayerStateMachine : MonoBehaviour
     private RunningPlayerState _runningState { get; } = new RunningPlayerState();
     private DeathPlayerState _deathState { get; } = new DeathPlayerState();
     private AttackPlayerState _attackstate { get; } = new AttackPlayerState();
+
+    private HitPlayerState _hitState { get; } = new HitPlayerState();
     #endregion
 
     #region Accessors
@@ -46,6 +48,8 @@ public class PlayerStateMachine : MonoBehaviour
     public RunningPlayerState RunningState => _runningState;
     public DeathPlayerState DeathState => _deathState;
     public AttackPlayerState AttackState => _attackstate;
+
+    public HitPlayerState HitState => _hitState;
     #endregion
     public PlayerState[] AllStates => new PlayerState[]
     {
@@ -53,6 +57,7 @@ public class PlayerStateMachine : MonoBehaviour
         _runningState,
         _deathState,
         _attackstate,
+        _hitState,
     };
 
     #endregion
