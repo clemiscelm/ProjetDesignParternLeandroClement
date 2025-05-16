@@ -10,6 +10,7 @@ public class EnemyBT : MonoBehaviour {
     public Transform[] PatrolPoints;
     public GameObject Bullet;
     public Animator Animator;
+    public bool isAlive = true;
     
     public NavMeshAgent Agent { get; private set; }
 
@@ -38,7 +39,10 @@ public class EnemyBT : MonoBehaviour {
         });
     }
 
-    void Update() {
+    void Update()
+    {
+        if (!isAlive)
+            return;
         root.Evaluate();
         Animator.SetFloat("WalkSpeed", Agent.velocity.magnitude);
     }
