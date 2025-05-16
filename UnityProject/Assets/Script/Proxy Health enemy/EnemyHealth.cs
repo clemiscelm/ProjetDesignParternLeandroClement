@@ -26,7 +26,8 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
     }
 
     private void Die() {
-        Debug.Log("[Enemy] has died.");
-        Destroy(gameObject);
+        GetComponentInChildren<Animator>().SetTrigger("Die");
+        GetComponent<EnemyBT>().isAlive = false;
+        //Destroy(gameObject);
     }
 }
