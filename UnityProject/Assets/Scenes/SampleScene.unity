@@ -2151,6 +2151,7 @@ MonoBehaviour:
   - {fileID: 2064927454}
   Bullet: {fileID: 6917320056427121270, guid: 23f12c65e423aa349a821cffba399891, type: 3}
   Animator: {fileID: 0}
+  isAlive: 1
 --- !u!114 &123723210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4423,6 +4424,7 @@ MonoBehaviour:
   - {fileID: 1261631734}
   Bullet: {fileID: 6917320056427121270, guid: 23f12c65e423aa349a821cffba399891, type: 3}
   Animator: {fileID: 0}
+  isAlive: 1
 --- !u!114 &257595154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9321,6 +9323,7 @@ MonoBehaviour:
   - {fileID: 2064927454}
   Bullet: {fileID: 6917320056427121270, guid: 23f12c65e423aa349a821cffba399891, type: 3}
   Animator: {fileID: 0}
+  isAlive: 1
 --- !u!114 &602095949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24493,6 +24496,7 @@ MonoBehaviour:
   - {fileID: 1261631734}
   Bullet: {fileID: 6917320056427121270, guid: 23f12c65e423aa349a821cffba399891, type: 3}
   Animator: {fileID: 0}
+  isAlive: 1
 --- !u!114 &1563850546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25902,7 +25906,7 @@ Transform:
   m_GameObject: {fileID: 1656150556}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.0669737, y: 2.5, z: 14.80642}
+  m_LocalPosition: {x: 0, y: 2.5, z: 0}
   m_LocalScale: {x: 0.020000001, y: 0.02, z: 0.020000001}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -26901,6 +26905,7 @@ MonoBehaviour:
   - {fileID: 1261631734}
   Bullet: {fileID: 6917320056427121270, guid: 23f12c65e423aa349a821cffba399891, type: 3}
   Animator: {fileID: 0}
+  isAlive: 1
 --- !u!114 &1692855188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30914,6 +30919,7 @@ MonoBehaviour:
   - {fileID: 1261631734}
   Bullet: {fileID: 6917320056427121270, guid: 23f12c65e423aa349a821cffba399891, type: 3}
   Animator: {fileID: 0}
+  isAlive: 1
 --- !u!114 &1980595105
 MonoBehaviour:
   m_ObjectHideFlags: 0
