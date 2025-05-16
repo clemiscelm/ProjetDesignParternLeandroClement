@@ -21,6 +21,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable {
         Debug.Log($"[Enemy] took {amount} damage. Remaining: {currentHealth}");
 
         if (currentHealth <= 0f) {
+            healthBar.gameObject.SetActive(false);
             Die();
         }
     }

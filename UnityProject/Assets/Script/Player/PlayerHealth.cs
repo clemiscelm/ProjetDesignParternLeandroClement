@@ -24,6 +24,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable {
         healthBar.value = currentHealth;
         if (currentHealth <= 0f) 
         {
+            healthBar.gameObject.SetActive(false);
             Die();
         }
     }
